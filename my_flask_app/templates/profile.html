@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Редактирование профиля</title>
+    </head>
+    <body>
+        <h1>Редактирование профиля</h1>
+        <form method="POST">
+            <label for="name">Имя:</label><br>
+            <input type="text" id="name" name="name" value="{{ user.name }}" required><br><br>
+
+            <label for="email">Почта:</label><br>
+            <input type="email" id="email" name="email" value="{{ user.email }}" required><br><br>
+
+            <label for="password">Пароль:</label><br>
+            <input type="password" id="password" name="password" value="{{ user.password }}" required><br><br>
+
+            <input type="submit" value="Сохранить изменения">
+        </form>
+
+        <h2>Текущие данные профиля:</h2>
+        <p><strong>Имя:</strong> {{ user.name }}</p>
+        <p><strong>Почта:</strong> {{ user.email }}</p>
+        <p><strong>Пароль:</strong> {{ user.password }}</p>
+    </body>
+    </html>
